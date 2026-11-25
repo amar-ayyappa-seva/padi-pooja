@@ -258,7 +258,7 @@ h1{font-family:Cinzel,'Cormorant Garamond',serif!important;font-size:clamp(24px,
 
 <script>
 // Set the host's WhatsApp number (country code + digits, e.g. "1XXXXXXXXXX") to send RSVPs straight to your phone.
-var HOST_PHONE="";
+var HOST_PHONE="+1 917-803-9322";
 var $=function(i){return document.getElementById(i)};
 (function(){var t=$("ttl"),k=0,ws=t.textContent.split(" ");t.textContent="";
 ws.forEach(function(w,n){var s=document.createElement("span");s.className="w";w.split("").forEach(function(c){var e=document.createElement("span");e.className="ltr";e.style.setProperty("--i",k++);e.textContent=c;s.appendChild(e)});t.appendChild(s);if(n<ws.length-1){t.appendChild(document.createTextNode(" "));k++}})})();
@@ -292,6 +292,29 @@ var link="https://amar-ayyappa-seva.github.io/padi-pooja/";
 try{if(location.protocol.indexOf("http")===0)link=location.href.split("#")[0]}catch(e){}
 $("wa").href="https://wa.me/?text="+encodeURIComponent("🙏 Swamiye Saranam! You are invited to Sri Ayyappa Swamy Padi Pooja on Dec 9, 2026 at 4 PM. "+link);
 $("copy").onclick=function(){try{navigator.clipboard.writeText(link);$("copy").textContent="Copied ✓"}catch(e){prompt("Copy this link",link)}};
+const bgm = document.getElementById("bgm");
+const musicBtn = document.getElementById("musicBtn");
+
+let musicStarted = false;
+
+document.getElementById("openBtn").addEventListener("click", () => {
+  setTimeout(() => {
+    if (!musicStarted) {
+      bgm.play().catch(()=>{});
+      musicStarted = true;
+    }
+  }, 1500);
+});
+
+musicBtn.addEventListener("click", () => {
+  if (bgm.paused) {
+    bgm.play();
+    musicBtn.textContent = "🔊";
+  } else {
+    bgm.pause();
+    musicBtn.textContent = "🔇";
+  }
+});
 </script>
 </body>
 </html>
