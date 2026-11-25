@@ -1,27 +1,297 @@
-Temple Door Animation
-↓
-Ayyappa Darshan
-↓
-Welcome Message
-↓
-Host Family
-↓
-Event Details
-↓
-Countdown
-↓
-Program Timeline
-↓
-Dress Code
-↓
-Prasadam
-↓
-Telugu Invitation
-↓
-Directions + QR
-↓
-Blessings Wall
-↓
-RSVP
-↓
-Share Invitation
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sri Ayyappa Swamy Padi Pooja – Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Cormorant+Garamond:wght@500;700&family=Noto+Sans+Telugu:wght@500;700&family=Mukta:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf4e2;--card:#fffaf0;--ink:#5e0f1c;--muted:#8c4a4f;--accent:#8b1a1a;--gold:#c8901f;--line:#e6d3a8;--on-accent:#fff7e6;--glow:rgba(200,144,31,.35);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c0f08;--card:#2a1810;--ink:#f6d9d2;--muted:#d9a9a2;--accent:#ff8a7a;--gold:#e8b44a;--line:#4a2f1d;--on-accent:#1c0f08;--glow:rgba(232,180,74,.3)}}
+:root[data-theme="dark"]{--bg:#1c0f08;--card:#2a1810;--ink:#f6d9d2;--muted:#d9a9a2;--accent:#ff8a7a;--gold:#e8b44a;--line:#4a2f1d;--on-accent:#1c0f08;--glow:rgba(232,180,74,.3)}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Mukta,system-ui,sans-serif;line-height:1.6;text-align:center}
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',Georgia,serif;margin:0}
+.te{font-family:'Noto Sans Telugu',sans-serif}
+section{max-width:620px;margin:0 auto;padding:44px 22px}
+.om{font-size:44px;color:var(--gold);text-shadow:0 0 18px var(--glow)}
+.orn{color:var(--gold);letter-spacing:10px;margin:8px 0 22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;margin:14px 0}
+.lbl{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600}
+.val{font-family:'Cormorant Garamond',Georgia,serif;font-size:24px;font-weight:700}
+.btn{display:inline-block;background:var(--accent);color:var(--on-accent);border:0;border-radius:999px;padding:12px 24px;font:600 16px Mukta,sans-serif;text-decoration:none;cursor:pointer;margin:6px}
+.btn.alt{background:transparent;color:var(--accent);border:1.5px solid var(--accent)}
+#intro{position:fixed;inset:0;z-index:50;background:linear-gradient(#fff 0,#fffaf0 40%,#f7ebc9 100%);color:#4a210e;display:flex;flex-direction:column;align-items:center;padding:calc(env(safe-area-inset-top,0px) + 7vh) 24px 0;text-align:center;overflow:hidden;transition:opacity 1s,visibility 1s}
+#intro .txt{position:relative;z-index:2;width:100%;max-width:420px;padding:14px 10px;border-radius:20px;background:radial-gradient(closest-side,rgba(255,255,255,.92),rgba(255,255,255,.6) 70%,rgba(255,255,255,0));animation:rise 1.6s both}
+@keyframes rise{from{opacity:0;transform:translateY(-24px)}to{opacity:1;transform:none}}
+#intro.gone{opacity:0;visibility:hidden}
+.scene{position:absolute;inset:0;width:100%;height:100%;transform-origin:50% 68%;transition:transform 1.6s ease-in}
+.scene *{transform-box:fill-box}
+.sun{transform-origin:center;animation:pulse 4s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.18);opacity:.8}}
+.cloud{animation:drift 26s linear infinite alternate}.c2{animation-duration:34s;animation-direction:alternate-reverse}
+@keyframes drift{from{transform:translateX(-30px)}to{transform:translateX(50px)}}
+.bird{fill:none;stroke:#8a6a44;stroke-width:2;animation:fly 14s linear infinite}.b2{animation-delay:-6s;animation-duration:18s}
+@keyframes fly{from{transform:translate(-60px,0)}50%{transform:translate(200px,-30px)}to{transform:translate(480px,10px)}}
+.step{stroke:#cdb678;stroke-width:.6;fill:var(--b);animation:climb 3.2s infinite}
+@keyframes climb{0%,40%,100%{fill:var(--b)}15%{fill:#ffcf4a}}
+.flame{transform-origin:center bottom;animation:flick .5s infinite alternate}
+@keyframes flick{from{transform:scale(1,.85)}to{transform:scale(1.15,1.15)}}
+.dl,.dr{transition:transform 1.1s ease-in-out}.open .dl{transform:translateX(-22px)}.open .dr{transform:translateX(22px)}
+.open .scene{transform:scale(1.5)}.open .txt,.open .btn{opacity:0;transition:opacity .6s}
+.glow{animation:pulse 2.4s infinite}.roof{animation:shine 3s ease-in-out infinite alternate}
+@keyframes shine{to{filter:brightness(1.15) drop-shadow(0 0 6px #ffcf4a)}}
+.petal{position:absolute;top:-30px;z-index:1;font-size:18px;opacity:.85;animation:fall linear infinite}
+@keyframes fall{to{transform:translate(40px,110vh) rotate(360deg)}}
+.w{display:inline-block;white-space:nowrap}
+.ltr{display:inline-block;opacity:0;animation:pop .6s calc(var(--i)*.07s + .8s) both,wave 2.6s calc(var(--i)*.09s + 2.2s) ease-in-out infinite}
+@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.85)}to{opacity:1;transform:none}}
+@keyframes wave{50%{transform:translateY(-3px);text-shadow:0 0 10px #ffd45c}}
+.card{opacity:0;transform:translateY(22px);transition:opacity .8s,transform .8s}.card.in{opacity:1;transform:none}
+.nm{display:inline-block;opacity:0;font-family:Cinzel,'Cormorant Garamond',Georgia,serif;letter-spacing:1.5px;font-size:.86em;background:linear-gradient(90deg,var(--nb),var(--gold) 25%,var(--nb) 50%,var(--gold) 75%,var(--nb));background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.in .nm{animation:pop .9s calc(var(--i)*.3s + .3s) both,sheen 4s linear infinite}
+@keyframes sheen{to{background-position:-200% center}}
+:root{--nb:#7a1020}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--nb:#ffb3a8}}
+:root[data-theme="dark"]{--nb:#ffb3a8}
+@media (prefers-reduced-motion:reduce){#intro *{animation:none!important}.ltr,.nm{animation:none!important;opacity:1!important}.card{opacity:1!important;transform:none!important}}
+.diya{animation:fl 1.6s infinite alternate;display:inline-block}
+@keyframes fl{from{transform:scale(1);filter:drop-shadow(0 0 6px #ffb300)}to{transform:scale(1.15);filter:drop-shadow(0 0 18px #ffb300)}}
+#intro .btn{position:absolute;z-index:3;bottom:calc(env(safe-area-inset-bottom,0px) + 5vh);left:50%;translate:-50% 0;background:#b8321a;color:#fff7e6;font-size:18px;white-space:nowrap;animation:glowbtn 2s infinite}
+@keyframes glowbtn{0%,100%{box-shadow:0 0 0 0 rgba(200,144,31,.6)}50%{box-shadow:0 0 0 14px rgba(200,144,31,0)}}
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:16px 0}
+.cd div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 0}
+.cd b{display:block;font:700 30px 'Cormorant Garamond',serif;color:var(--accent)}
+.cd span{font-size:11px;letter-spacing:2px;color:var(--muted)}
+.prog{list-style:none;padding:0;margin:14px 0;text-align:left}
+.prog li{display:flex;gap:14px;align-items:center;padding:11px 4px;border-bottom:1px dashed var(--line)}
+.prog i{font-style:normal;width:30px;height:30px;flex:none;border-radius:50%;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font-weight:600;font-size:14px}
+form{text-align:left}
+label{display:block;font-weight:600;margin:14px 0 4px}
+input,textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit}
+.opts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.opts label{margin:0;border:1.5px solid var(--line);border-radius:12px;padding:10px 4px;text-align:center;cursor:pointer;font-weight:400;font-size:14px}
+.opts input{display:none}
+.opts input:checked+span{color:var(--accent);font-weight:700}
+.opts label:has(input:checked){border-color:var(--accent);background:var(--card)}
+.cnt{display:flex;gap:12px;align-items:center}
+.cnt button{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--accent);background:none;color:var(--accent);font-size:22px;cursor:pointer}
+.cnt output{min-width:28px;text-align:center;font-weight:700;font-size:20px}
+.muted{color:var(--muted);font-size:14px}
+
+#gate{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;background:#b88a2a;overflow:hidden;transition:opacity .6s,visibility .6s}
+#gate.gone{opacity:0;visibility:hidden}
+.pn{position:absolute;top:0;bottom:0;width:50%;border:8px solid #b88a2a;background:repeating-linear-gradient(0deg,rgba(0,0,0,.07) 0 2px,transparent 2px 4px),radial-gradient(circle,#ffe9a8 0 3px,transparent 3.6px) 0 0/33px 33px,linear-gradient(90deg,#4a2a10,#6b3d17 55%,#4a2a10);transition:transform 1.5s cubic-bezier(.7,0,.3,1)}
+.pn.l{left:0;border-right-width:6px}.pn.r{right:0;border-left-width:6px}
+.pn::before{content:"";position:absolute;inset:12% 12%;border:4px double #e0b24a;border-radius:16px}
+.pn::after{content:"";position:absolute;inset:0;background:radial-gradient(circle,#fff 0 2px,transparent 2.6px) 16px 16px/66px 66px;animation:tw 2.2s ease-in-out infinite alternate}
+.pn.r::after{animation-delay:-1.1s}
+@keyframes tw{from{opacity:.05}to{opacity:.95}}
+#gate.open .pn.l{transform:translateX(-102%)}#gate.open .pn.r{transform:translateX(102%)}
+#card{position:relative;z-index:3;width:min(86vw,360px);padding:34px 16px 28px;text-align:center;background:#fffdf4;border:2px solid #1f5a3a;border-radius:200px 200px 28px 28px;box-shadow:inset 0 0 0 6px #fffdf4,inset 0 0 0 8px #c8901f,0 14px 40px rgba(0,0,0,.4);animation:rise 1.4s both;transition:opacity .7s,transform .9s}
+#gate.open #card{opacity:0;transform:scale(.88)}
+.gom{font-size:56px;line-height:1.1;color:#7a1020;margin-top:18px;animation:pulse 3s ease-in-out infinite}
+.gte{font-size:clamp(20px,6vw,25px);color:#1f5a3a;margin-top:6px}
+#ttl{font-family:Cinzel,'Cormorant Garamond',Georgia,serif;font-size:clamp(11px,3.4vw,14px);letter-spacing:2.5px;color:#8a5a10;margin-top:4px}
+.gtag{font:italic 500 19px 'Cormorant Garamond',Georgia,serif;color:#5a3418;margin:22px 0}
+.gbtn{border:1.5px solid #a8741a;border-radius:999px;padding:14px 22px;background:linear-gradient(#f3d27a,#c8901f);color:#3b1c06;font:700 clamp(12px,3.6vw,15px) Cinzel,Georgia,serif;letter-spacing:1px;text-transform:uppercase;cursor:pointer;box-shadow:0 6px 16px rgba(160,110,20,.35);animation:glowbtn 2s infinite}
+.gfl{display:inline-block;animation:fl 1.6s infinite alternate}
+@media (prefers-reduced-motion:reduce){#gate *,#card{animation:none!important}}
+#gate{background:linear-gradient(#fff 0,#fffaf0 40%,#f7ebc9 100%);align-items:flex-start;padding-top:calc(env(safe-area-inset-top,0px) + 6vh)}
+#card{width:min(94vw,440px);padding:22px 8px 30px;background:radial-gradient(closest-side,rgba(255,255,255,.92),rgba(255,255,255,.55) 72%,rgba(255,255,255,0));border:0;border-radius:0;box-shadow:none}
+.gte,#ttl,.gtag{white-space:nowrap}
+.gte{font-size:clamp(17px,5.4vw,24px)}
+#ttl{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-size:clamp(15px,4.6vw,21px);letter-spacing:2.5px;color:#7a1020;margin-top:6px;text-shadow:0 0 6px #fff,0 0 12px #fff,0 1px 0 #f0cf7a}
+#ttl .ltr{opacity:1;animation:wave 2.6s calc(var(--i)*.09s) ease-in-out infinite}
+#ttl::after{content:"";display:block;width:62%;height:2px;margin:7px auto 0;background:linear-gradient(90deg,transparent,#c8901f,transparent)}
+.gtag{font-size:clamp(15px,4.6vw,19px);margin:12px 0 0}
+.gbtn{position:fixed;z-index:4;bottom:calc(env(safe-area-inset-bottom,0px) + 5vh);left:50%;translate:-50% 0;white-space:nowrap;padding:13px 20px;font-size:clamp(10px,3vw,14px);letter-spacing:.6px;background:linear-gradient(#ffe680,#f2b91c);border:1.5px solid #c8901f;color:#3b1c06;box-shadow:0 6px 16px rgba(200,144,31,.45)}
+.ayy *{transform-box:fill-box}.halo{transform-origin:center;animation:pulse 4s ease-in-out infinite}
+#gate.open .scene{transform:scale(3.4);transition:transform 1.5s ease-in}
+#sanct{position:absolute;inset:0;z-index:6;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(circle at 50% 46%,#8a3410,#2a0d06 72%);opacity:0;visibility:hidden;transition:opacity .45s,visibility .45s}
+#sanct.show{opacity:1;visibility:visible}
+#sanct::before{content:"";position:absolute;inset:-60%;background:repeating-conic-gradient(rgba(255,220,120,.16) 0 6deg,transparent 6deg 15deg);animation:spin 14s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+#sanct .ay{position:relative;height:min(74vh,520px);max-width:94vw;transform:scale(.78);opacity:.15;transition:transform 2.4s ease-out,opacity 1.1s .25s}
+#sanct.go .ay{transform:none;opacity:1}
+#sanct .pn{z-index:3;transition:transform 1.3s cubic-bezier(.65,0,.25,1)}
+#sanct .pn.l,#sanct .pn.r{transform:none!important}
+#sanct.go .pn.l{transform:translateX(-102%)!important}#sanct.go .pn.r{transform:translateX(102%)!important}
+#sanct .cap{position:absolute;z-index:4;bottom:calc(env(safe-area-inset-bottom,0px) + 7vh);left:0;right:0;font-size:clamp(18px,5.4vw,24px);color:#ffe9a8;text-shadow:0 0 12px #c8901f;opacity:0;transition:opacity 1s 1.5s}
+#sanct.go .cap{opacity:1}
+.hero-ay{width:min(64vw,250px);margin:18px auto;border:3px double var(--gold);border-radius:150px 150px 14px 14px;overflow:hidden;background:radial-gradient(circle at 50% 46%,#8a3410,#2a0d06 75%);box-shadow:0 10px 28px rgba(90,20,10,.3)}
+.hero-ay svg{display:block;width:100%;height:auto}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:10px}
+.chips span{border:1.5px solid var(--accent);color:var(--accent);border-radius:999px;padding:5px 12px;font-size:14px;font-weight:600;background:var(--bg)}
+.lbl{font-family:Cinzel,'Cormorant Garamond',serif;color:var(--accent)!important;letter-spacing:2.5px}
+section h2{font-family:Cinzel,'Cormorant Garamond',serif;color:var(--accent);letter-spacing:2px;font-size:clamp(22px,6.4vw,30px)!important}
+h1{font-family:Cinzel,'Cormorant Garamond',serif!important;font-size:clamp(24px,7.6vw,38px)!important;letter-spacing:2px;line-height:1.2!important}
+#top .om,.card .om{color:var(--accent)}
+.card{box-shadow:inset 0 0 0 4px var(--card),inset 0 0 0 5.5px var(--line)}
+</style>
+</head>
+<body>
+
+<div id="gate">
+  <svg class="scene" viewBox="0 0 400 800" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs><radialGradient id="sg"><stop offset="0" stop-color="#ffe9a8"/><stop offset="1" stop-color="#ffe9a8" stop-opacity="0"/></radialGradient><linearGradient id="gd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8d36a"/><stop offset="1" stop-color="#c8901f"/></linearGradient></defs>
+    <circle class="sun" cx="200" cy="440" r="170" fill="url(#sg)"/>
+    <g class="cloud c1"><ellipse cx="80" cy="190" rx="46" ry="12" fill="#fff"/><ellipse cx="110" cy="180" rx="30" ry="12" fill="#fff"/></g>
+    <g class="cloud c2"><ellipse cx="300" cy="270" rx="52" ry="13" fill="#fff"/><ellipse cx="270" cy="260" rx="28" ry="11" fill="#fff"/></g>
+    <path class="bird b1" d="M0 300 q8 -8 16 0 q8 -8 16 0"/><path class="bird b2" d="M0 340 q6 -6 12 0 q6 -6 12 0"/>
+    <path d="M0 470 L70 400 L130 450 L200 380 L270 450 L330 395 L400 460 V800 H0Z" fill="#ece6c8"/>
+    <path d="M0 520 Q80 440 160 500 T320 480 T400 510 V800 H0Z" fill="#ddd5a8"/>
+    <path d="M0 580 Q100 510 200 570 T400 560 V800 H0Z" fill="#cfc592"/>
+    <g fill="#b9b27c"><path d="M30 585 l12 -40 l12 40z"/><path d="M62 595 l10 -32 l10 32z"/><path d="M335 580 l12 -40 l12 40z"/><path d="M362 595 l10 -30 l10 30z"/></g>
+    <rect x="150" y="500" width="100" height="60" fill="#fff6dc" stroke="#c8901f"/>
+    <rect class="glow" x="178" y="515" width="44" height="45" fill="#ffe08a"/>
+    <rect class="dl" x="178" y="515" width="22" height="45" fill="#8a3a14"/><rect class="dr" x="200" y="515" width="22" height="45" fill="#8a3a14"/>
+    <path class="roof" d="M135 502 L200 445 L265 502Z" fill="url(#gd)"/><path class="roof" d="M160 468 L200 428 L240 468Z" fill="url(#gd)"/>
+    <circle cx="200" cy="422" r="5" fill="#f8d36a"/><circle cx="150" cy="496" r="4" fill="#f8d36a"/><circle cx="250" cy="496" r="4" fill="#f8d36a"/>
+    <g id="steps"></g>
+    <g class="flame"><ellipse cx="122" cy="640" rx="4" ry="9" fill="#ffb300"/></g><g class="flame"><ellipse cx="278" cy="640" rx="4" ry="9" fill="#ffb300"/></g>
+    <g class="flame"><ellipse cx="112" cy="700" rx="4" ry="9" fill="#ffb300"/></g><g class="flame"><ellipse cx="288" cy="700" rx="4" ry="9" fill="#ffb300"/></g>
+  </svg>
+  <div id="card">
+    <div class="gom">ॐ</div>
+    <div class="gte te">స్వామియే శరణం అయ్యప్ప</div>
+    <div id="ttl">SWAMIYE SARANAM AYYAPPA</div>
+    <p class="gtag">A sacred invitation awaits you</p>
+    <button class="gbtn" id="openBtn"><span class="gfl">🪔</span> Open the Temple Doors</button>
+  </div>
+  <div id="sanct">
+    <svg class="ay ayy" viewBox="0 0 300 400" aria-hidden="true">
+      <defs><radialGradient id="ag1"><stop offset="0" stop-color="#ffe9a8"/><stop offset="1" stop-color="#ffe9a8" stop-opacity="0"/></radialGradient><linearGradient id="ag2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8d36a"/><stop offset="1" stop-color="#b9801a"/></linearGradient></defs>
+      <circle class="halo" cx="150" cy="190" r="150" fill="url(#ag1)"/>
+      <path d="M36 400V200A114 114 0 0 1 264 200V400" fill="none" stroke="url(#ag2)" stroke-width="7"/>
+      <path d="M50 400V200A100 100 0 0 1 250 200V400" fill="none" stroke="#ffd45c" stroke-width="4" stroke-dasharray="1 11" stroke-linecap="round"/>
+      <path d="M62 386h176l-12-28H74z" fill="url(#ag2)"/>
+      <ellipse cx="150" cy="342" rx="92" ry="26" fill="#e9b73a"/><path d="M70 342q80 24 160 0" fill="none" stroke="#b9801a" stroke-width="3"/>
+      <path d="M108 202Q82 252 86 324M192 202Q218 252 214 324" fill="none" stroke="#2c1b14" stroke-width="16" stroke-linecap="round"/>
+      <ellipse cx="86" cy="328" rx="15" ry="11" fill="#2c1b14"/><ellipse cx="214" cy="328" rx="15" ry="11" fill="#2c1b14"/>
+      <path d="M106 198Q150 184 194 198L182 304H118Z" fill="#2c1b14"/><rect x="116" y="296" width="68" height="12" rx="5" fill="url(#ag2)"/>
+      <path d="M108 200Q150 322 192 200" fill="none" stroke="#ffb300" stroke-width="9" stroke-dasharray="1 9" stroke-linecap="round"/>
+      <path d="M113 198Q150 290 187 198" fill="none" stroke="#e8453c" stroke-width="9" stroke-dasharray="1 9" stroke-linecap="round"/>
+      <path d="M119 196Q150 258 181 196" fill="none" stroke="#fff" stroke-width="7" stroke-dasharray="1 8" stroke-linecap="round"/>
+      <circle cx="150" cy="164" r="25" fill="#2c1b14"/>
+      <path d="M138 162q5-4 10 0M152 162q5-4 10 0" stroke="#ffd45c" fill="none" stroke-width="1.6"/><path d="M150 148v10" stroke="#ffd45c" stroke-width="2.5"/>
+      <circle cx="124" cy="174" r="4" fill="#ffd45c"/><circle cx="176" cy="174" r="4" fill="#ffd45c"/>
+      <path d="M116 156Q118 112 150 104Q182 112 184 156Q150 142 116 156Z" fill="#ec6fa0"/><path d="M118 150Q150 136 182 150" stroke="url(#ag2)" stroke-width="6" fill="none"/>
+      <circle cx="150" cy="128" r="6" fill="#e8453c" stroke="#ffd45c" stroke-width="2"/><path d="M150 106l-6-16h12z" fill="url(#ag2)"/>
+      <rect x="19" y="312" width="6" height="64" fill="#c8901f"/><ellipse cx="22" cy="310" rx="12" ry="5" fill="#e9b73a"/><g class="flame"><ellipse cx="22" cy="298" rx="4" ry="9" fill="#ffb300"/></g>
+      <rect x="275" y="312" width="6" height="64" fill="#c8901f"/><ellipse cx="278" cy="310" rx="12" ry="5" fill="#e9b73a"/><g class="flame"><ellipse cx="278" cy="298" rx="4" ry="9" fill="#ffb300"/></g>
+    </svg>
+    <div class="pn l"></div><div class="pn r"></div>
+    <div class="cap te">స్వామియే శరణం అయ్యప్ప</div>
+  </div>
+</div>
+
+<section id="top">
+  <div class="om">ॐ</div>
+  <div class="te" style="font-size:26px;color:var(--accent)">స్వామియే శరణం అయ్యప్ప</div>
+  <div class="serif" style="font-size:20px;letter-spacing:4px;color:var(--muted)">SWAMIYE SARANAM AYYAPPA</div>
+  <div class="orn">✦ ❁ ✦</div>
+  <div class="hero-ay" id="hay"></div>
+  <p>With the divine blessings of <b>Lord Ayyappa Swamy</b>, we cordially invite you and your family to join us for the auspicious occasion of</p>
+  <h1 style="font-size:44px;line-height:1.1;color:var(--accent);margin:14px 0">SRI AYYAPPA SWAMY<br>PADI POOJA</h1>
+  <p>Let us come together in devotion, seek Lord Ayyappa’s blessings, and celebrate with prayers, bhajans, and prasadam.</p>
+  <a class="btn alt" href="#details">Event Details ▾</a>
+</section>
+
+<section id="details">
+  <h2 style="font-size:34px">Event Details</h2>
+  <div class="orn">✦ ❁ ✦</div>
+  <div class="card"><div class="lbl">🙏 Hosted by</div><div class="val"><span class="nm" style="--i:0">Amar</span>, <span class="nm" style="--i:1">Lavya</span> and <span class="nm" style="--i:2">Vidhur Ved</span></div></div>
+  <div class="card"><div class="lbl">📅 Date</div><div class="val">Wednesday, December 9, 2026</div></div>
+  <div class="card"><div class="lbl">🕕 Time</div><div class="val">4:00 PM</div></div>
+  <div class="card"><div class="lbl">📍 Venue</div><div class="val">Our Home</div><div>71 Shelter Ln E, Dawsonville, GA 30534</div></div>
+  <div class="card"><div class="lbl">🪔 Pooja Performed By</div><div class="om" style="font-size:28px">ॐ</div><div class="val"><span class="nm" style="--i:0">Guru Swamy Ravi Gaaru</span></div><p class="muted" style="margin-bottom:0">The Padi Pooja will be conducted under his sacred guidance, with Vedic chants and the traditional rituals of Sabarimala.</p></div>
+  <div class="card"><div class="lbl">🪔 Program</div><div class="chips"><span>Ganapathy Homam</span><span>Ganesh Pooja</span><span>Subramanya Pooja</span><span>Ayyappa Padi Pooja</span><span>Ayyappa Abhishekam</span><span>Padi Paatu</span><span>Harivarasanam</span><span>Prasadam</span></div></div>
+  <div class="cd"><div><b id="d">--</b><span>DAYS</span></div><div><b id="h">--</b><span>HOURS</span></div><div><b id="m">--</b><span>MINUTES</span></div><div><b id="s">--</b><span>SECONDS</span></div></div>
+  <a class="btn alt" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=71+Shelter+Ln+E,+Dawsonville,+GA+30534">Get Directions</a>
+  <a class="btn alt" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Sri+Ayyappa+Swamy+Padi+Pooja&dates=20261209T160000/20261209T200000&ctz=America/New_York&location=71+Shelter+Ln+E,+Dawsonville,+GA+30534&details=Padi+Pooja+by+Guru+Swamy+Ravi+Gaaru.+Hosted+by+Amar,+Lavya+and+Vidhur+Ved.">Add to Google Calendar</a>
+  <a class="btn" href="#rsvp">RSVP Now</a>
+</section>
+
+<section id="program">
+  <h2 style="font-size:34px">Order of Pooja</h2>
+  <p class="muted">An evening of devotion at the sacred Pathinettam Padi</p>
+  <ol class="prog" style="padding:0">
+    <li><i>1</i>Ganapathy Homam</li><li><i>2</i>Ganesh Pooja</li><li><i>3</i>Subramanya Pooja</li><li><i>4</i>Ayyappa Padi Pooja</li>
+    <li><i>5</i>Ayyappa Abhishekam</li><li><i>6</i>Padi Paatu</li><li><i>7</i>Harivarasanam</li><li><i>8</i>Prasadam</li>
+  </ol>
+</section>
+
+<section id="rsvp">
+  <h2 style="font-size:34px">Kindly RSVP</h2>
+  <p>Your presence will make this sacred occasion complete. Please respond by <b>December 5, 2026</b>.</p>
+  <form id="f" class="card">
+    <label for="n">Guest Full Name</label><input id="n" required>
+    <label for="p">Mobile Number</label><input id="p" type="tel" required>
+    <label>Will you attend?</label>
+    <div class="opts">
+      <label><input type="radio" name="a" value="Yes" checked><span>🙏 Yes<br><small>Joyfully attending</small></span></label>
+      <label><input type="radio" name="a" value="Maybe"><span>🪔 Maybe<br><small>Will try my best</small></span></label>
+      <label><input type="radio" name="a" value="No"><span>🌼 No<br><small>Sending blessings</small></span></label>
+    </div>
+    <label>Number of Adults</label><div class="cnt"><button type="button" data-t="ad" data-s="-1">−</button><output id="ad">1</output><button type="button" data-t="ad" data-s="1">+</button></div>
+    <label>Number of Children</label><div class="cnt"><button type="button" data-t="ch" data-s="-1">−</button><output id="ch">0</output><button type="button" data-t="ch" data-s="1">+</button></div>
+    <label for="msg">Message to Host (optional)</label><textarea id="msg" rows="3"></textarea>
+    <div style="text-align:center;margin-top:18px"><button class="btn" type="submit">Send RSVP on WhatsApp</button></div>
+  </form>
+  <div id="thanks" class="card" style="display:none"><div class="om">ॐ</div><h3 style="font-size:28px">Swamiye Saranam Ayyappa!</h3><p>Thank you for your response. May Lord Ayyappa Swamy bless you and your family with peace, prosperity, and happiness.</p><button class="btn alt" id="edit">Update my response</button></div>
+</section>
+
+<section id="share">
+  <h2 style="font-size:30px">Share the Invitation</h2>
+  <p class="muted">Please share this invitation with your family and friends.</p>
+  <button class="btn alt" id="copy">Copy link</button>
+  <a class="btn" id="wa" target="_blank" rel="noopener">Share on WhatsApp</a>
+  <div class="orn" style="margin-top:30px">✦ ❁ ✦</div>
+  <div class="te" style="font-size:20px">లోకా సమస్తా సుఖినో భవంతు</div>
+  <div class="serif" style="letter-spacing:3px;color:var(--muted)">LOKAAH SAMASTAAH SUKHINO BHAVANTU</div>
+  <p class="muted">With devotion and warm regards,<br><b>Amar, Lavya and Vidhur Ved</b></p>
+</section>
+
+<script>
+// Set the host's WhatsApp number (country code + digits, e.g. "1XXXXXXXXXX") to send RSVPs straight to your phone.
+var HOST_PHONE="";
+var $=function(i){return document.getElementById(i)};
+(function(){var t=$("ttl"),k=0,ws=t.textContent.split(" ");t.textContent="";
+ws.forEach(function(w,n){var s=document.createElement("span");s.className="w";w.split("").forEach(function(c){var e=document.createElement("span");e.className="ltr";e.style.setProperty("--i",k++);e.textContent=c;s.appendChild(e)});t.appendChild(s);if(n<ws.length-1){t.appendChild(document.createTextNode(" "));k++}})})();
+var cards=document.querySelectorAll(".card");
+if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.2});cards.forEach(function(c){io.observe(c)})}else{cards.forEach(function(c){c.classList.add("in")})}
+(function(){var g=$("steps"),ns="http://www.w3.org/2000/svg";
+for(var i=0;i<18;i++){var w=60+i*8.2,r=document.createElementNS(ns,"rect");
+r.setAttribute("x",200-w/2);r.setAttribute("y",560+i*10);r.setAttribute("width",w);r.setAttribute("height",10);
+r.setAttribute("class","step");r.style.setProperty("--b",i%2?"#eadba8":"#f4e8c2");r.style.animationDelay=((17-i)*.14)+"s";g.appendChild(r)}
+for(var j=0;j<16;j++){var p=document.createElement("span");p.className="petal";p.textContent=j%3?"🌼":"🪷";
+p.style.left=Math.random()*100+"%";p.style.animationDuration=(7+Math.random()*7)+"s";p.style.animationDelay=(-Math.random()*10)+"s";$("gate").appendChild(p)}})();
+(function(){var c=document.querySelector("#sanct svg").cloneNode(true);c.setAttribute("class","ayy");$("hay").appendChild(c)})();
+$("openBtn").onclick=function(){var i=$("gate"),z=$("sanct");i.classList.add("open");
+setTimeout(function(){z.classList.add("show")},1100);
+setTimeout(function(){z.classList.add("go")},1300);
+setTimeout(function(){i.classList.add("gone");window.scrollTo(0,0)},3900)};
+var target=new Date("2026-12-09T16:00:00-05:00").getTime();
+function tick(){var t=Math.max(0,target-Date.now());
+$("d").textContent=Math.floor(t/864e5);$("h").textContent=Math.floor(t%864e5/36e5);
+$("m").textContent=Math.floor(t%36e5/6e4);$("s").textContent=Math.floor(t%6e4/1e3)}
+tick();setInterval(tick,1000);
+document.querySelectorAll(".cnt button").forEach(function(b){b.onclick=function(){
+var o=$(b.dataset.t),min=b.dataset.t==="ad"?0:0;o.textContent=Math.max(min,Math.min(20,+o.textContent+ +b.dataset.s))}});
+$("f").onsubmit=function(e){e.preventDefault();
+var a=document.querySelector("input[name=a]:checked").value;
+var txt="🙏 Swamiye Saranam! RSVP for Sri Ayyappa Swamy Padi Pooja (Dec 9, 2026)\nName: "+$("n").value+"\nMobile: "+$("p").value+"\nAttending: "+a+"\nAdults: "+$("ad").textContent+"\nChildren: "+$("ch").textContent+($("msg").value?"\nMessage: "+$("msg").value:"");
+window.open("https://wa.me/"+HOST_PHONE+"?text="+encodeURIComponent(txt),"_blank");
+$("f").style.display="none";$("thanks").style.display="block"};
+$("edit").onclick=function(){$("thanks").style.display="none";$("f").style.display="block"};
+var link="https://amar-ayyappa-seva.github.io/padi-pooja/";
+try{if(location.protocol.indexOf("http")===0)link=location.href.split("#")[0]}catch(e){}
+$("wa").href="https://wa.me/?text="+encodeURIComponent("🙏 Swamiye Saranam! You are invited to Sri Ayyappa Swamy Padi Pooja on Dec 9, 2026 at 4 PM. "+link);
+$("copy").onclick=function(){try{navigator.clipboard.writeText(link);$("copy").textContent="Copied ✓"}catch(e){prompt("Copy this link",link)}};
+</script>
+</body>
+</html>
